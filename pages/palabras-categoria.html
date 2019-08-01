@@ -1,0 +1,36 @@
+<div class="container" ng-controller="PalabrasCategoriaControlador">
+  <div class="page-header">
+    <button class="btn btn-info btn-sm" onclick="window.history.back();"><i class="fa fa-arrow-left" aria-hidden="true"></i> VOLVER</button>
+    <h2><b>PALABRAS</b> (Cantidad: {{total}})</h2>
+  </div>    
+  <div class="col-md-6" >
+    <div class="row">
+        <div class="col-md-8">
+          <input type="text" class="form-control" ng-model="buscar[queryBy]" placeholder="FILTRAR POR TAGS" autofocus>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+    <div id="contenidoTabla" dir-paginate="data in palabras | filter:buscar | itemsPerPage:itemsPerPage" total-items="total"  current-page="pageno" style="text-transform: uppercase;"> 
+      <div class="col-md-6">
+        <div class="card text-center">
+          <a ng-href="#!/ver-palabra/{{data.id}}"><img ng-src="https://ls.villamaria.gob.ar/backend/palabras/{{data.id}}/imagen" class=""  width="250px" height="150px"  alt="{{data.id}}"></a>
+          <div class="card-body">
+            <input hidden value="{{data.tags}}">
+            <h5 style="font-weight:bold;" class="card-title">{{data.nombre}}</h5>
+            <span class="badge" ng-href="#!/palabras/{{data.id}}" style="background-color: #216ad8;">{{data.categoria.nombre}}</span>
+            <span class="badge" style="background-color: #b300e0;">{{data.categoria.nivel.nombre}}</span>            
+          </div>
+          <br>
+        </div>
+      </div> 
+  </div>
+</div>
+<dir-pagination-controls
+         max-size="15"
+        direction-links="true"
+        boundary-links="true" 
+        on-page-change="cambiarPagina(newPageNumber)" >
+</dir-pagination-controls>
+ </div>
+</div>

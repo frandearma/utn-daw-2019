@@ -1,0 +1,109 @@
+<!doctype html>
+<html ng-app="test">
+  <head>
+    <meta charset="utf-8">
+    <title>TPI - DAW2019</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Francisco De Arma">
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- FOnt Awesome 4 para aplicarlo rapido, la clave es el 5 igual :) -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-resource.js"></script>
+    <script src="lib/dirPagination.js"></script>
+    <script src="lib/app.module.js"></script>
+    <script src="lib/app.config.js"></script>
+    <script src="lib/script.js"></script>
+    <script src="lib/resources/categorias.resources.js"></script>
+    <script src="lib/resources/palabras.resources.js"></script>
+    <script src="lib/resources/palabrasCategoria.resources.js"></script>
+    <script src="lib/resources/verPalabra.resources.js"></script>
+    <script src="lib/verPalabra.controller.js"></script>
+    <script src="lib/palabras.controller.js"></script>
+    <script src="lib/palabras-categoria.controller.js"></script>
+    <script src="lib/categorias.controller.js"></script>
+    <script src="lib/niveles.controller.js"></script>
+    
+    <style>
+    .page-header {
+    margin: 0px 0 0px;
+    border-bottom: 0px solid #eee;
+    }
+    </style>
+  </head>
+
+  <body>
+  <div class="container">
+      <div class="page-header">
+          <h2><i><b>Desarrollo Web  - UTN FRVM</b></i></h2>
+      </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#seccionesCollapse"><span class="glyphicon glyphicon-th">
+                            </span> Secciones</a>
+                        </h4>
+                    </div>
+                    <div id="seccionesCollapse" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <a href="#!niveles">Niveles</a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#!categorias">Categorias</a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#!palabras">Palabras</a> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user">
+                            </span> Integrantes</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <h4>Francisco De Arma </h4>
+                            <h4>Antonella Manias </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-9">
+            <div class="well">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  </body>
+  
+</html>

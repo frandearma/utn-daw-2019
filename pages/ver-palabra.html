@@ -1,0 +1,24 @@
+<div class="container" ng-controller="VerPalabraControlador">
+  <div class="page-header">
+   <button class="btn btn-info btn-sm" onclick="window.history.back();"><i class="fa fa-arrow-left" aria-hidden="true"></i> VOLVER</button>
+  </div>   
+  <div class="col-md-6" >
+    <div class="row">
+    <div id="contenidoTabla" style="text-transform: uppercase;"> 
+      <center>
+          <h2><b>{{palabra.nombre}}</b></h2>
+          <img src="https://ls.villamaria.gob.ar/backend/palabras/{{palabra.id}}/imagen" class="" width="280px" height="180px"  alt="{{data.id}}">
+      </center>
+      <br>
+            <div class="list-group">
+                <a href="#!/palabras-categoria/{{palabra.categoria.id}}" class="list-group-item list-group-item-action list-group-item-light"><b>CATEGORIA</b> {{palabra.categoria.nombre}}</a>
+                <a href="#!/niveles" class="list-group-item list-group-item-action list-group-item-light"><b>NIVEL</b> {{palabra.categoria.nivel.nombre}}</a>
+                <li  class="list-group-item list-group-item-action list-group-item-light"><b>TAGS</b> {{palabra.tags}}</li>
+                <a href="#!/niveles" class="list-group-item list-group-item-action list-group-item-light"><b>NIVEL</b> {{palabra.categoria.nivel.nombre}}</a>
+              </div>
+    
+          </div>
+          <br>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="page-header">
+    <h2><b>CATEGORIAS</b></h2>
+  </div>    
+  <div class="col-md-6" ng-controller="CategoriasControlador">
+    <div class="row">
+    <div id="contenidoTabla" ng-repeat="data in categorias" ng-value="data.id"> 
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="https://ls.villamaria.gob.ar/backend/categorias/{{data.id}}/imagen" class="" width="280px" height="180px"  alt="{{data.id}}">
+          <div class="card-body">
+            <h4 class="card-title">{{data.nombre}}</h4>
+            <a href="#!/palabras-categoria/{{data.id}}" class="btn btn-primary">Ver Palabras</a>
+          </div>
+          <br>
+        </div>
+      </div> 
+  </div>
+</div>
+ </div>
+</div>
