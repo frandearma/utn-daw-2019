@@ -8,3 +8,7 @@ aplicación dividida en cliente y servidor el TP de Backend ya presentado.
 * Mostrar las palabras dentro de una categoría.
 * Mostrar todas las palabras del sistema (paginadas) con la posibilidad de filtrar por tags.
 * Acceder a una palabra en particular para ver la información de la misma
+
+## Integrantes
+* De Arma, Francisco
+* Manias, Antonella
